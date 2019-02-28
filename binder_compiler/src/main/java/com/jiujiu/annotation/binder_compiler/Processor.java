@@ -7,10 +7,8 @@ import com.jiujiu.annotation.binder_annotation.OnClick;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.sun.org.apache.xpath.internal.operations.Variable;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -87,6 +85,7 @@ public class Processor extends AbstractProcessor {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
+            messager.printMessage(Diagnostic.Kind.OTHER, "this is my note");
         }
         return false;
     }
